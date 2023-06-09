@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="calculator-container">
+      <table>
+        <tbody>
+          <tr>
+            <th colspan="4" id="post-number"></th>
+          </tr>
+          <tr>
+            <th colspan="4" id="pre-number"></th>
+          </tr>
+          <tr>
+            <th colspan="4" id="curr-number"></th>
+          </tr>
+          <tr>
+            <td>
+              <button class="action-button" onclick="clearNumber()">C</button>
+            </td>
+            <td>
+              <button class="action-button" onclick="deleteNumber()">D</button>
+            </td>
+            <td>
+              <button class="action-button" onclick="convertNumber()">
+                +/-
+              </button>
+            </td>
+            <td rowspan="5" style="padding: 0">
+              <table class="action-container">
+                <tbody>
+                  <tr>
+                    <td>
+                      <button
+                        class="action-button"
+                        onclick="clickOperator('+')"
+                      >
+                        +
+                      </button>
+                    </td>
+                  </tr>
+
+                  <!--
+                    TODO: Add SUBSTRACTION, MULTIPLICATION & DIVISON action
+                    please use the same component as ADDITION action
+                  -->
+
+                  <tr>
+                    <td>
+                      <button class="action-button" onclick="calculate()">
+                        =
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td><button onclick="inputNumber('7')">7</button></td>
+            <td><button onclick="inputNumber('8')">8</button></td>
+            <td><button onclick="inputNumber('9')">9</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="inputNumber('4')">4</button></td>
+            <td><button onclick="inputNumber('5')">5</button></td>
+            <td><button onclick="inputNumber('6')">6</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="inputNumber('1')">1</button></td>
+            <td><button onclick="inputNumber('2')">2</button></td>
+            <td><button onclick="inputNumber('3')">3</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="inputNumber('00')">00</button></td>
+            <td><button onclick="inputNumber('0')">0</button></td>
+            <td><button onclick="inputNumber('.')">.</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
